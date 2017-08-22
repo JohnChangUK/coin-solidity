@@ -16,7 +16,7 @@ contract Coin {
         // Give coins to the receiver as the sender calling giveCoins() is the deployer/creator of the contract
             balances[receiver] += amount;
         } else {
-            require;
+            require(msg.sender != deployer);
         }
     }
 
